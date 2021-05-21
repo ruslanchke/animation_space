@@ -1,0 +1,105 @@
+body{
+	background: url('../image/46.jpeg');
+}
+
+
+
+.img_1{
+	width: 100px;
+}
+
+.space_1{
+	left: 90%;
+	animation: space 8s linear infinite;
+}
+
+.space_2{
+	position: absolute;
+	left: 80%;
+	animation: space 10s linear infinite;
+}
+.space_3{
+	left: 70%;
+	animation: space 15s linear infinite;
+}
+.space_4{
+	position: absolute;
+	left: 60%;
+	animation: space_1 5s linear infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes space_1{
+	0%{
+		left: 600px; top: 300px;
+	}
+
+	100%{
+		top: 500px
+	}
+}
+
+
+
+@keyframes space{
+	0%{
+		top: -10%; transform: translateX(15px) rotate(0deg);
+	}
+	20%{
+		top: transform: translateX(-15px) rotate(45deg);
+	}
+	40%{
+		top: 40%; transform: translateX(-15px) rotate(90deg);
+	}
+	60%{
+		top:transform: translateX(15px) rotate(180deg);
+	}
+	80%{
+		top: transform: translateX(-15px) rotate(0deg);
+	}
+	100%{
+		top: 110%; transform: translateX(-15px) rotate(225deg);
+	}
+}
+
+.earth{
+	width: 300px;
+	padding: 100px;
+
+	position: relative;
+	z-index: 1;
+}
+
+
+.moon{
+	width: 100px;	
+
+	position: absolute;
+	top: 170px;
+	left: 170px;
+	animation: linear 5s orbita infinite;
+}
+@keyframes orbita {
+	0%{
+		width: 70px;
+	}
+	24%{
+		z-index: 0;
+	}
+	25%{
+		left: 380px; top: 130px; z-index: 2;
+	}
+	50%{
+		width: 150px;
+	}
+	74%{
+		z-index: 2;
+	}
+	75%{
+		top: 300px; left: 40px; z-index: 0;
+	}
+	100%{
+		width: 70px; 
+		transform: rotate(360deg);
+	}
+}
